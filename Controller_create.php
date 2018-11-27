@@ -1,7 +1,6 @@
 <?php
-require('DBconnect.php');
+require('Controller_connect.php');
 $collection = (new MongoDB\Client)->StarWars->Planetas;
-
 $insertOneResult = $collection->insertOne([
     'id' => $_POST['id'] ,
     'name' =>  $_POST['name'],

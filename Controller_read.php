@@ -1,6 +1,6 @@
 
 <?php
-require('DBconnect.php');
+require('Controller_connect.php');
  $m = (new MongoDB\Client)->StarWars->Planetas;
 	
  // select a database
@@ -18,7 +18,7 @@ require('DBconnect.php');
     echo '</br>';
     echo 'Aparições em Filmes: '.$document["Qtaparicoes"] . "\n";
     echo '</br>';
-    echo '<form method="post" action="delete.php">
+    echo '<form method="post" action="Controller_delete.php">
              <div class="form-group">';
     echo '    <button id="apagar" name="apagar" value="'.$document["id"].'">Apagar</button>';
     echo '     </br>';
